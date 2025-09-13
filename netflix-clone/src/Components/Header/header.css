@@ -1,0 +1,54 @@
+.header_outer_container {
+  width: 100%;
+  background-color: #141414; /* Netflix dark background */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 60px;
+}
+
+.header_left ul,
+.header_right ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header_left li,
+.header_right li {
+  margin: 0 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Netflix left menu text */
+.header_left li {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header_left img {
+  margin-right: 10px;
+}
+
+/* ICONS STYLE */
+.header_right li svg {
+  font-size: 28px; /* icon size */
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.header_right li svg:hover {
+  color: #e50914; /* Netflix red hover */
+}
