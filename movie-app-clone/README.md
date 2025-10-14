@@ -1,6 +1,6 @@
-# Movie App Clone
+# Netflix Clone 2025
 
-A modern movie streaming application built with React, featuring a Netflix-like interface for browsing and discovering movies and TV shows.
+A modern Netflix-inspired streaming application built with React, featuring a sleek interface for browsing and discovering movies and TV shows.
 
 ## Features
 
@@ -31,8 +31,8 @@ A modern movie streaming application built with React, featuring a Netflix-like 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/movie-app-clone.git
-cd movie-app-clone
+git clone https://github.com/SamyAb-Ed/Netflix-Clone-2025.git
+cd Netflix-Clone-2025
 ```
 
 2. Install dependencies:
