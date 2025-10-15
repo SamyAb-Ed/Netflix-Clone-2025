@@ -41,7 +41,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
   };
 
   return (
-    <div className="row">
+    <div className={`row ${title === "Horror Movies" ? "horror-movies" : ""}`}>
       <h2>{title}</h2>
 
       <div className="row_posters">
@@ -54,6 +54,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}
             alt={movie.name}
+            data-title={movie.title || movie.name || movie.original_name}
+            title={movie.title || movie.name || movie.original_name}
           />
         ))}
       </div>

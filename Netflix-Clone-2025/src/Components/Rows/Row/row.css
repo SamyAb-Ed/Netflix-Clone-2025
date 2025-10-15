@@ -1,0 +1,149 @@
+/* Row Container */
+.row {
+  color: white;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+/* Row Title Styling */
+.row h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+}
+
+/* Special styling for Horror Movies title */
+.row.horror-movies h2 {
+  color: #e50914;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(229, 9, 20, 0.5);
+  position: relative;
+}
+
+.row.horror-movies h2::after {
+  content: "🎬";
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Posters Container */
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+/* Hide scrollbar but keep functionality */
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row_posters {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Individual Poster Styling */
+.row_poster {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 450ms;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Large Poster (Netflix Originals) */
+.row_posterLarge {
+  max-height: 250px;
+  border-radius: 6px;
+}
+
+/* Hover Effects */
+.row_poster:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.09);
+}
+
+/* Movie Title Overlay for Horror Movies */
+.row_poster {
+  position: relative;
+}
+
+/* Add movie title overlay on hover for Horror Movies */
+.row.horror-movies .row_poster::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: white;
+  padding: 20px 10px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 4px 4px;
+}
+
+.row.horror-movies .row_poster:hover::after {
+  opacity: 1;
+}
+
+/* Enhanced visibility for Horror Movies section */
+.row.horror-movies {
+  background: linear-gradient(
+    135deg,
+    rgba(229, 9, 20, 0.1),
+    rgba(0, 0, 0, 0.3)
+  );
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  margin: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    margin-left: 10px;
+  }
+
+  .row h2 {
+    font-size: 1.2rem;
+  }
+
+  .row.horror-movies h2 {
+    font-size: 1.4rem;
+  }
+
+  .row_poster {
+    max-height: 80px;
+  }
+
+  .row_posterLarge {
+    max-height: 200px;
+  }
+}
+
+/* YouTube Trailer Container */
+.row > div:last-child {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
