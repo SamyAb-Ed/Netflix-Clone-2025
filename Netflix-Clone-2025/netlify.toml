@@ -1,7 +1,7 @@
 [build]
   base = "Netflix-Clone-2025"
-  publish = "Netflix-Clone-2025/build"
-  command = "npm run build"
+  publish = "build"
+  command = "npm install && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
