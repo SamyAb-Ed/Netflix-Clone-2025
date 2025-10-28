@@ -1,5 +1,6 @@
 [build]
-  publish = "build"
+  base = "Netflix-Clone-2025"
+  publish = "Netflix-Clone-2025/build"
   command = "npm run build"
 
 [build.environment]
